@@ -17,4 +17,24 @@ public class ProdutoResource {
         return p;
     }
 
+    @GetMapping("/consulta")
+    public Produto consulta(Produto produto){
+        return produto;
+    }
+
+    @PostMapping
+    public Produto incluir(@RequestBody Produto produto){
+        return produto;
+    }
+
+    @PutMapping("/atualiza")
+    public Produto atualiza(){
+        return "Atualizando produto";
+    }
+
+    @DeleteMapping("/excluir/{id}")
+    public Produto excluir(@PathVariable("id") int id){
+        return excluir();
+    }
+
 }
