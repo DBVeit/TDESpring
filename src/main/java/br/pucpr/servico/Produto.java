@@ -1,7 +1,17 @@
 package br.pucpr.servico;
 
-public class Produto {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import net.bytebuddy.asm.Advice;
+import net.bytebuddy.implementation.bind.annotation.AllArguments;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Produto {
     private int id;
     private String nome;
     private int anoFabricacao;
